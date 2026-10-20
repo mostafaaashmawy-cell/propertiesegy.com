@@ -3,6 +3,14 @@
 Thumbs.db
 desktop.ini
 
+# Dependencies
+node_modules/
+package-lock.json
+
+# Raw user data & heavy PDFs (>25MB Cloudflare Pages limit)
+ORB Data/
+
+
 # IDE & Editor files
 .vscode/
 .idea/
@@ -13,3 +21,4 @@ desktop.ini
 
 # Temporary logs
 *.log
+
