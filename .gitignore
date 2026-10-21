@@ -9,6 +9,8 @@ package-lock.json
 
 # Raw user data & heavy PDFs (>25MB Cloudflare Pages limit)
 ORB Data/
+Jirian/
+
 
 
 # IDE & Editor files

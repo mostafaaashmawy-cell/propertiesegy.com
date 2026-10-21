@@ -161,7 +161,20 @@ function initUnitInquiryTriggers() {
       
       // Update hidden project fields in all forms
       document.querySelectorAll('input[name="project"]').forEach(input => {
-        input.value = `ORB Sheikh Zayed — ${unitType}`;
+        if (unitType.includes('Jirian')) {
+          input.value = unitType;
+        } else {
+          input.value = `ORB Sheikh Zayed — ${unitType}`;
+        }
+      });
+
+      // Update email subject line for clear lead routing
+      document.querySelectorAll('input[name="subject"]').forEach(input => {
+        if (unitType.includes('Jirian')) {
+          input.value = `New Jirian City Lead Submission — propertiesegy`;
+        } else {
+          input.value = `New ORB Lead (${unitType}) — propertiesegy`;
+        }
       });
 
       // Smooth scroll to primary lead form
