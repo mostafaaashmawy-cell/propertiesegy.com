@@ -89,6 +89,7 @@ function initFormSubmissions() {
 
       // Prepare payload
       const formData = new FormData(form);
+      formData.set('access_key', '3609e441-034d-431a-970a-675d93db4619');
       formData.set('name', fullName);
       formData.set('phone', fullPhone);
       formData.set('project', projectName);
@@ -96,24 +97,26 @@ function initFormSubmissions() {
       formData.set('broker', 'propertiesegy');
       formData.set('submitted_at', new Date().toISOString());
 
-      // Web3Forms API
+      // Web3Forms API Submission
       try {
+        const payload = Object.fromEntries(formData.entries());
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: formData
+          body: JSON.stringify(payload)
         });
 
         const result = await response.json();
 
-        if (response.ok || result.success) {
+        if (response.ok && result.success) {
           triggerConversions();
           form.reset();
           openSuccessModal(fullName, fullPhone, projectName);
         } else {
-          console.warn('Web3Forms message:', result);
+          console.warn('Web3Forms response:', result);
           triggerConversions();
           form.reset();
           openSuccessModal(fullName, fullPhone, projectName);
