@@ -2,3 +2,5 @@
 # Direct paths are served natively without redirect loops
 /nations-of-sky  /nations-of-sky/  301
 /ora             /ora/             301
+/ora/privacy     /ora/privacy.html 301
+/ora/terms       /ora/terms.html   301
