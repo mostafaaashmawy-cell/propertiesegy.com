@@ -157,7 +157,7 @@ img {
 .official-brand-logo-xl {
   height: 52px;
   width: auto;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
+  filter: brightness(0) invert(1) drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
 }
 
 .brand-subbranding {
