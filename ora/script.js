@@ -23,7 +23,7 @@ function gtag_report_conversion(url) {
 
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
-      'send_to': 'AW-299139259/IttmCOi8ieIcELuB0o4B',
+      'send_to': 'AW-299139259/OsrUCJGerfYcELuB0o4B',
       'value': 1.0,
       'currency': 'EGP',
       'event_callback': callback

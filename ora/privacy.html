@@ -72,6 +72,37 @@
     }
     .back-btn:hover { color: #FFF; }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-299139259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-299139259');
+  </script>
+
+  <!-- Google Ads Conversion Function -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-299139259/OsrUCJGerfYcELuB0o4B',
+          'value': 1.0,
+          'currency': 'EGP',
+          'event_callback': callback
+      });
+    } else if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+    return false;
+  }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -102,7 +133,7 @@
     <p>We implement robust administrative and technical protections to secure your personal data. We do not sell, lease, or distribute your private contact details to unauthorized third-party advertisers or marketing entities.</p>
 
     <h2>4. Contact Us</h2>
-    <p>For questions or data deletion requests, contact PropertiesEgy Advisory on WhatsApp at <a href="https://wa.me/201020958859">+20 102 095 8859</a>.</p>
+    <p>For questions or data deletion requests, contact PropertiesEgy Advisory on WhatsApp at <a href="https://wa.me/201020958859" onclick="return gtag_report_conversion(this.href);">+20 102 095 8859</a>.</p>
   </div>
 </body>
 </html>

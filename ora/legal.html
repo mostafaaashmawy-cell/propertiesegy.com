@@ -75,6 +75,37 @@
     }
     .back-btn:hover { color: #FFF; }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-299139259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-299139259');
+  </script>
+
+  <!-- Google Ads Conversion Function -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-299139259/OsrUCJGerfYcELuB0o4B',
+          'value': 1.0,
+          'currency': 'EGP',
+          'event_callback': callback
+      });
+    } else if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+    return false;
+  }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -89,7 +120,7 @@
     <section id="terms">
       <h2>Terms &amp; Conditions</h2>
       <p>PropertiesEgy operates strictly as an authorized channel partner and independent advisory firm. We are not the builder, contractor, or master developer. All property purchases, contracts, down payment receipts, and delivery guarantees are executed directly between the purchaser and ORA Developers at standard developer rates with 0% broker commission.</p>
-      <p>For inquiries, contact our advisory team via WhatsApp at <a href="https://wa.me/201020958859">+20 102 095 8859</a>.</p>
+      <p>For inquiries, contact our advisory team via WhatsApp at <a href="https://wa.me/201020958859" onclick="return gtag_report_conversion(this.href);">+20 102 095 8859</a>.</p>
     </section>
   </div>
 </body>
