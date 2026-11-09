@@ -1,3 +1,4 @@
 # Cloudflare Pages / Static Server Redirects
 # Direct paths are served natively without redirect loops
 /nations-of-sky  /nations-of-sky/  301
+/ora             /ora/             301
